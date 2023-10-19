@@ -1,6 +1,8 @@
-import { Header } from "./components/Header";
-import Intro from "./components/Intro";
-import Main from "./components/Main";
+import { About } from "./About";
+import { Divider } from "./Divider";
+import { Header } from "./Header";
+import Intro from "./Intro";
+import Main from "./Main";
 
 const App = () => {
   return (
@@ -12,7 +14,9 @@ const App = () => {
       ></div>
       <Header />
       <Main>
-      <Intro />
+        <Intro />
+        <Divider />
+        <About />
       </Main>
     </div>
   );
