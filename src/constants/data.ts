@@ -98,4 +98,5 @@ export const skillsData = [
   "Redux",
   "Express",
   "Framer Motion",
+  "i18n"
 ] as const;
