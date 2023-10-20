@@ -3,6 +3,7 @@ import { Divider } from "./Divider";
 import { Header } from "./Header";
 import Intro from "./Intro";
 import Main from "./Main";
+import { Projects } from "./Projects";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Intro />
         <Divider />
         <About />
+        <Projects />
       </Main>
     </div>
   );

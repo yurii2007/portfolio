@@ -6,7 +6,7 @@ import myPortrait from "../images/myphoto.jpg";
 
 const Intro = () => {
   return (
-    <section className="relative mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section id="home" className="relative mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div

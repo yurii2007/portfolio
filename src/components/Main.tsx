@@ -1,4 +1,8 @@
-const Main = ({ children }: { children: React.ReactNode }) => {
+type MainProps = {
+  children: React.ReactNode;
+};
+
+const Main = ({ children }: MainProps) => {
   return <main className="flex flex-col items-center px-4">{children}</main>;
 };
 

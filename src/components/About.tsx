@@ -7,8 +7,9 @@ export const About = () => {
     <motion.section
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{delay: 0.175}}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40"
+      transition={{ delay: 0.175 }}
+      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      id="about"
     >
       <Title text="About me" />
       <p className="mb-3">
@@ -24,11 +25,10 @@ export const About = () => {
           GoIT
         </a>
         , where I immersed myself in
-        <span className="font-medium">&nbp;full-stack web development</span>. What truly
+        <span className="font-medium">&nbsp;full-stack web development</span>. What truly
         excites me about<span className="font-medium">&nbsp;programming</span>&nbsp;is the
-        thrill of solving complex problems, that&nbsp;'
-        <span className="underline">Aha!</span>'&nbsp;moment when everything falls into
-        place. My primary tech stack includes&nbsp;
+        thrill of solving complex problems, that 'Aha!' moment when everything
+        falls into place. My primary tech stack includes&nbsp;
         <span className="font-medium">
           React, Redux, Node.js, and MongoDB, and I'm well-versed in TypeScript, i18n and
           Redux&#47;Redux Toolkit
