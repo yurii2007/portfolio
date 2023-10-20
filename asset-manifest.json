@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.851de51f.css",
-    "main.js": "/static/js/main.811c2098.js",
+    "main.css": "/static/css/main.0b533f9e.css",
+    "main.js": "/static/js/main.d882d7d5.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/cinemania.png": "/static/media/cinemania.46442cf727c11f843ea2.png",
     "static/media/money-guard.png": "/static/media/money-guard.5db75db2a95949620127.png",
     "static/media/car-rent.png": "/static/media/car-rent.c4bddb6cb2d381668eda.png",
     "static/media/myphoto.jpg": "/static/media/myphoto.47ff74c81fe9f914b8f0.jpg",
     "index.html": "/index.html",
-    "main.851de51f.css.map": "/static/css/main.851de51f.css.map",
-    "main.811c2098.js.map": "/static/js/main.811c2098.js.map",
+    "main.0b533f9e.css.map": "/static/css/main.0b533f9e.css.map",
+    "main.d882d7d5.js.map": "/static/js/main.d882d7d5.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.851de51f.css",
-    "static/js/main.811c2098.js"
+    "static/css/main.0b533f9e.css",
+    "static/js/main.d882d7d5.js"
   ]
 }
