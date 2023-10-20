@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
+import clsx from "clsx";
 
+import { Link, SetSection } from "./App.types";
 import { links } from "../constants/data";
 
-export const Header = () => {
+interface Props {
+  active: Link;
+  setActive: SetSection;
+  onLinkClick: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export const Header = ({ active, setActive, onLinkClick }: Props) => {
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -18,12 +26,27 @@ export const Header = () => {
               key={link.hash}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
+              onClick={() => {
+                onLinkClick(Date.now());
+                setActive(link.name);
+              }}
             >
               <a
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
+                className={clsx(
+                  `flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500
+                 dark:hover:text-gray-300`,
+                  { "text-gray-950": active === link.name }
+                )}
                 href={link.hash}
               >
                 {link.name}
+                {link.name === active ? (
+                  <motion.span
+                    className="bg-gray-100 rounded-full absolute inset-0 -z-10"
+                    layoutId="activeSection"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  ></motion.span>
+                ) : null}
               </a>
             </motion.li>
           ))}

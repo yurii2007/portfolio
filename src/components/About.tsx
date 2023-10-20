@@ -1,10 +1,23 @@
 import { motion } from "framer-motion";
 
 import { Title } from "./Title";
+import type { DefaultProps } from "./App.types";
 
-export const About = () => {
+import { useViewSection } from "../hooks/useViewSection";
+import { links } from "../constants/data";
+
+export const About = ({ setActive, lastClickTime }: DefaultProps) => {
+  const initialViewState = {
+    sectionName: links[1].name,
+    lastClickTime,
+    setActive,
+    threshold: 0.75,
+  };
+  const { ref } = useViewSection(initialViewState);
+
   return (
     <motion.section
+      ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -27,8 +40,8 @@ export const About = () => {
         , where I immersed myself in
         <span className="font-medium">&nbsp;full-stack web development</span>. What truly
         excites me about<span className="font-medium">&nbsp;programming</span>&nbsp;is the
-        thrill of solving complex problems, that 'Aha!' moment when everything
-        falls into place. My primary tech stack includes&nbsp;
+        thrill of solving complex problems, that 'Aha!' moment when everything falls into
+        place. My primary tech stack includes&nbsp;
         <span className="font-medium">
           React, Redux, Node.js, and MongoDB, and I'm well-versed in TypeScript, i18n and
           Redux&#47;Redux Toolkit

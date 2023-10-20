@@ -1,11 +1,21 @@
 import { Title } from "./Title";
 import { Project } from "./Project";
 
-import { projectsData } from "../constants/data";
+import { DefaultProps } from "./App.types";
+import { useViewSection } from "../hooks/useViewSection";
+import { links, projectsData } from "../constants/data";
 
-export const Projects = () => {
+export const Projects = ({ setActive, lastClickTime }: DefaultProps) => {
+  const initialViewState = {
+    sectionName: links[2].name,
+    lastClickTime,
+    setActive,
+    threshold: 0.5,
+  };
+  const { ref } = useViewSection(initialViewState);
+
   return (
-    <section className="scroll-mt-28" id="projects">
+    <section ref={ref} className="scroll-mt-28" id="projects">
       <Title text="My projects" />
       <div>
         {projectsData.map((project) => (

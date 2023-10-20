@@ -1,12 +1,27 @@
 import { motion } from "framer-motion";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-
 import myPortrait from "../images/myphoto.jpg";
 
-const Intro = () => {
+import { DefaultProps } from "./App.types";
+import { useViewSection } from "../hooks/useViewSection";
+import { links } from "../constants/data";
+
+const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
+  const initialViewState = {
+    sectionName: links[0].name,
+    lastClickTime,
+    setActive,
+    threshold: 0.5,
+  };
+  const { ref } = useViewSection(initialViewState);
+
   return (
-    <section id="home" className="relative mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section
+      ref={ref}
+      id="home"
+      className="relative mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
