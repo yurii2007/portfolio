@@ -52,11 +52,10 @@ export const About = ({ setActive, lastClickTime }: DefaultProps) => {
         Full-stack developer.
       </p>
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing video games,
-        watching movies, and playing with my dog. I also enjoy&nbsp;
+        <span className="italic">When I'm not coding</span>, I enjoy reading books and
+        watching movies. I also enjoy&nbsp;
         <span className="font-medium">learning new things</span>. I am currently learning
-        about <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        about <span className="font-medium">Docker and Nest.js</span>.
       </p>
     </motion.section>
   );

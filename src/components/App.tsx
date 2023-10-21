@@ -9,6 +9,7 @@ import Intro from "./Intro";
 import Main from "./Main";
 import { Projects } from "./Projects";
 import { Skills } from "./Skills";
+import { Experience } from "./Experience";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState<Link>("Home");
@@ -32,6 +33,7 @@ const App = () => {
         <About setActive={setActiveSection} lastClickTime={lastClickTime} />
         <Projects setActive={setActiveSection} lastClickTime={lastClickTime} />
         <Skills setActive={setActiveSection} lastClickTime={lastClickTime} />
+        <Experience setActive={setActiveSection} lastClickTime={lastClickTime} />
       </Main>
     </div>
   );
