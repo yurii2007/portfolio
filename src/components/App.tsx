@@ -8,6 +8,7 @@ import { Header } from "./Header";
 import Intro from "./Intro";
 import Main from "./Main";
 import { Projects } from "./Projects";
+import { Skills } from "./Skills";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState<Link>("Home");
@@ -30,6 +31,7 @@ const App = () => {
         <Divider />
         <About setActive={setActiveSection} lastClickTime={lastClickTime} />
         <Projects setActive={setActiveSection} lastClickTime={lastClickTime} />
+        <Skills setActive={setActiveSection} lastClickTime={lastClickTime} />
       </Main>
     </div>
   );

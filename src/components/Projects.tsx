@@ -15,7 +15,7 @@ export const Projects = ({ setActive, lastClickTime }: DefaultProps) => {
   const { ref } = useViewSection(initialViewState);
 
   return (
-    <section ref={ref} className="scroll-mt-28" id="projects">
+    <section ref={ref} className="scroll-mt-28 mb-28" id="projects">
       <Title text="My projects" />
       <div>
         {projectsData.map((project) => (
