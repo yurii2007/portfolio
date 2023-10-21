@@ -10,6 +10,8 @@ import Main from "./Main";
 import { Projects } from "./Projects";
 import { Skills } from "./Skills";
 import { Experience } from "./Experience";
+import { ContactForm } from "./ContactForm";
+import { Footer } from "./Footer";
 
 const App = () => {
   const [activeSection, setActiveSection] = useState<Link>("Home");
@@ -34,7 +36,9 @@ const App = () => {
         <Projects setActive={setActiveSection} lastClickTime={lastClickTime} />
         <Skills setActive={setActiveSection} lastClickTime={lastClickTime} />
         <Experience setActive={setActiveSection} lastClickTime={lastClickTime} />
+        <ContactForm setActive={setActiveSection} lastClickTime={lastClickTime} />
       </Main>
+      <Footer />
     </div>
   );
 };

@@ -20,7 +20,7 @@ export const Experience = ({ lastClickTime, setActive }: DefaultProps) => {
   const { ref } = useViewSection(initialViewState);
 
   return (
-    <section ref={ref} id="experience">
+    <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <Title text="My Experience" />
       <VerticalTimeline layout="1-column-left" lineColor="#e5e7eb">
         {experienceData.map((info) => (
