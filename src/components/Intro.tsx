@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import Lottie from "lottie-react";
 import myPortrait from "../images/myphoto.jpg";
 import waveHand from "../images/animation/waving.json";
+import linkedIn from "../images/animation/linkedInLogo.json";
+import github from "../images/animation/githubLogo.json";
 
 import { DefaultProps } from "./App.types";
 import { useViewSection } from "../hooks/useViewSection";
 import { links } from "../constants/data";
-import Lottie from "lottie-react";
 
 const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
   const initialViewState = {
@@ -52,7 +54,7 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
       <motion.p
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-10 mt-4 text-2xl font-medium !leading-[1.5]"
+        className="mb-10 mt-4 text-2xl text-[#333333] font-medium !leading-[1.5]"
       >
         <span className="font-bold">Hello, I'm Yurii.</span>&nbsp;I'm a
         <span className="font-bold">&nbsp;Full-stack developer.</span>&nbsp;I take
@@ -70,7 +72,7 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
       >
         <a
           href="#contact"
-          className="group bg-slate-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-slate-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-[1.02] hover:bg-gray-950 transition"
         >
           Contact me&nbsp;
           <BsArrowRight className="group-hover:translate-x-1 transition opacity-70" />
@@ -78,26 +80,29 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
         <a
           href="../additionalFiles/CV.pdf"
           download
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          className="group bg-white text-slate-950 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-[1.02] transition cursor-pointer border border-black/10"
         >
           Download CV&nbsp;
-          <HiDownload className="group-hover:translate-y-1 opacity-60 transition" />
+          <HiDownload className="group-hover:translate-y-1 opacity-80 transition" />
         </a>
         <a
           href="https://www.linkedin.com/in/yurii-shymanskyi-313640278/"
           target="_blank"
           rel="noreferrer"
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-[0.4rem] text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
         >
-          <BsLinkedin />
+          <Lottie
+            animationData={linkedIn}
+            style={{ width: "2.5rem", height: "2.5rem" }}
+          />
         </a>
         <a
           href="https://github.com/yurii2007"
           target="_blank"
           rel="noreferrer"
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
         >
-          <BsGithub />
+          <Lottie animationData={github} style={{ width: "2rem", height: "2rem" }} />
         </a>
       </motion.div>
     </section>
