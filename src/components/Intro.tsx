@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import myPortrait from "../images/myphoto.jpg";
+import waveHand from "../images/animation/waving.json";
 
 import { DefaultProps } from "./App.types";
 import { useViewSection } from "../hooks/useViewSection";
 import { links } from "../constants/data";
+import Lottie from "lottie-react";
 
 const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
   const initialViewState = {
@@ -30,20 +32,20 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
             transition={{ type: "tween", duration: 0.2 }}
           >
             <img
-              className="h-24 w-24 rounded-full object-cover shadow-xl border-[0.35rem] border-white"
+              className="h-40 w-40 rounded-full object-cover shadow-xl border-[0.35rem] border-gray-950"
               src={myPortrait}
               alt="My portrait"
-              width={192}
-              height={192}
+              width={250}
+              height={250}
             />
           </motion.div>
           <motion.span
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 125, delay: 0.1, duration: 0.7 }}
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute bottom-0 -right-1"
           >
-            &#128075;
+            <Lottie animationData={waveHand} style={{ width: "70px", height: "70px" }} />
           </motion.span>
         </div>
       </div>
@@ -53,9 +55,10 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
         className="mb-10 mt-4 text-2xl font-medium !leading-[1.5]"
       >
         <span className="font-bold">Hello, I'm Yurii.</span>&nbsp;I'm a
-        <span className="font-bold">&nbsp;Full-stack developer.</span>&nbsp;I enjoy
-        building
-        <span className="italic">&nbsp;sites &amp; apps</span>.&nbsp;My focus is&nbsp;
+        <span className="font-bold">&nbsp;Full-stack developer.</span>&nbsp;I take
+        pleasure in creating
+        <span className="italic">&nbsp;websites &amp; applications</span>,&nbsp;with my
+        primary focus being on&nbsp;
         <span className="underline">Node.js</span>.
       </motion.p>
 
@@ -67,7 +70,7 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
       >
         <a
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-slate-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me&nbsp;
           <BsArrowRight className="group-hover:translate-x-1 transition opacity-70" />
