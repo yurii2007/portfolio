@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div className="text-white relative pt-28 sm:pt-36">
-      <div className="bg-[#fbe2e3] absolute z-0 top-[6rem] left-[50%] -translate-x-[50%] h-[28.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
+      <div className="bg-[#fbe2e3] absolute z-0 top-[6rem] left-[50%] -translate-x-[50%] h-[28rem] w-full rounded-full sm:blur-[10rem] blur-[8rem]"></div>
       <Header
         active={activeSection}
         setActive={setActiveSection}

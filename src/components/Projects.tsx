@@ -17,7 +17,7 @@ export const Projects = ({ setActive, lastClickTime }: DefaultProps) => {
   return (
     <section ref={ref} className="scroll-mt-28 mb-28" id="projects">
       <Title text="My projects" />
-      <div>
+      <div className="flex flex-wrap justify-center gap-x-40 gap-y-10">
         {projectsData.map((project) => (
           <Project {...project} key={project.title} />
         ))}

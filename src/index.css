@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-shadow {
+    text-shadow: #029cdc 1px 1px 20px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
