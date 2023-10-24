@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.377650c0.css",
-    "main.js": "/portfolio/static/js/main.cc38dff0.js",
+    "main.css": "/portfolio/static/css/main.cad77f0f.css",
+    "main.js": "/portfolio/static/js/main.8b2c6dab.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/cinemania.png": "/portfolio/static/media/cinemania.46442cf727c11f843ea2.png",
     "static/media/money-guard.png": "/portfolio/static/media/money-guard.5db75db2a95949620127.png",
     "static/media/car-rent.png": "/portfolio/static/media/car-rent.c4bddb6cb2d381668eda.png",
     "static/media/myphoto.jpg": "/portfolio/static/media/myphoto.47ff74c81fe9f914b8f0.jpg",
     "index.html": "/portfolio/index.html",
-    "main.377650c0.css.map": "/portfolio/static/css/main.377650c0.css.map",
-    "main.cc38dff0.js.map": "/portfolio/static/js/main.cc38dff0.js.map",
+    "main.cad77f0f.css.map": "/portfolio/static/css/main.cad77f0f.css.map",
+    "main.8b2c6dab.js.map": "/portfolio/static/js/main.8b2c6dab.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.377650c0.css",
-    "static/js/main.cc38dff0.js"
+    "static/css/main.cad77f0f.css",
+    "static/js/main.8b2c6dab.js"
   ]
 }
