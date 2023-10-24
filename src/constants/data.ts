@@ -31,22 +31,20 @@ export const links = [
   },
 ] as const;
 
-// more about education !!
-console.log('data.ts');
-
 export const experienceData = [
   {
     title: "Graduated technical school",
     location: "Ryki, Poland",
     description:
-      "I graduated after 4 years of studying.",
+      "I successfully graduated after four years of education, gaining base knowledge in computer science, electronics, and engineering.",
     icon: React.createElement(LuGraduationCap),
     date: "2019 - 2023",
   },
   {
     title: "Graduated bootcamp",
     location: "GoIT, Ukraine",
-    description: "I graduated after 6 months of studying.",
+    description:
+      "Successfully graduated after completing an intensive Full-Stack course, acquiring in-depth knowledge of HTML, CSS, JavaScript, React, Node.js and various web-technologies",
     icon: React.createElement(LuGraduationCap),
     date: "2019",
   },

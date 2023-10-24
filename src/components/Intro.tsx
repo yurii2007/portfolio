@@ -72,7 +72,8 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
       >
         <a
           href="#contact"
-          className="group bg-slate-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-[1.02] hover:bg-gray-950 transition"
+          className="group bg-slate-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
+          focus:scale-105 hover:scale-105 active:scale-[1.02] hover:bg-slate-600 transition"
         >
           Contact me&nbsp;
           <BsArrowRight className="group-hover:translate-x-1 transition opacity-70" />

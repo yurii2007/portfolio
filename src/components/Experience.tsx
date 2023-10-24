@@ -22,27 +22,26 @@ export const Experience = ({ lastClickTime, setActive }: DefaultProps) => {
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <Title text="My Experience" />
-      <VerticalTimeline layout="1-column-left" lineColor="#e5e7eb">
+      <VerticalTimeline layout="1-column-right" lineColor="linear-gradient(148.92deg , #029cdc , #23274c)">
         {experienceData.map((info) => (
           <VerticalTimelineElement
             contentStyle={{
-              background: "#f3f4f6",
+              background: "#23274c",
               boxShadow: "none",
-              border: "1px solid rgba(0, 0, 0, 0.05)",
               textAlign: "left",
-              padding: "1.3rem 2rem",
+              padding: "2rem",
             }}
             contentArrowStyle={{
-              borderRight: "0.4rem solid #9ca3af",
+              borderLeft: "0.5rem solid #9ca3af",
             }}
             date={info.date}
             icon={info.icon}
-            iconStyle={{ background: "white", fontSize: "1.5rem" }}
+            iconStyle={{ background: "#23274c" }}
             key={info.title}
           >
             <h3 className="font-semibold capitalize">{info.title}</h3>
-            <p className="font-normal !mt-0">{info.location}</p>
-            <p className="!mt-1 !font-normal text-gray-700">{info.description}</p>
+            <p className="font-normal !mt-1">{info.location}</p>
+            <p className="!mt-1 !font-normal text-slate-300">{info.description}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
