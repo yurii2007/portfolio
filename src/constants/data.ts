@@ -46,7 +46,7 @@ export const experienceData = [
     description:
       "Successfully graduated after completing an intensive Full-Stack course, acquiring in-depth knowledge of HTML, CSS, JavaScript, React, Node.js and various web-technologies",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2023",
   },
 ] as const;
 
@@ -57,6 +57,8 @@ export const projectsData = [
       "Welcome to our Money Guard, your go-to web app for effortlessly managing income and expenses. As the team lead and developer, I'm dedicated to enhancing your financial control experience.",
     tags: ["React", "Redux Toolkit", "i18n", "REST API", "Styled Components"],
     imageUrl: moneyguardImg,
+    github: "https://github.com/yurii2007/moneyguard_project",
+    liveDemo: "https://yurii2007.github.io/moneyguard_project"
   },
   {
     title: "Cinemania",
@@ -64,6 +66,8 @@ export const projectsData = [
       "Welcome to our Cinemania, where you can explore a wide range of films across genres. My role was a developer, I am worked with API and part of the front-end development.",
     tags: ["JavaScript", "REST API", "CSS3", "HTML5"],
     imageUrl: cinemaniaImg,
+    github: "https://github.com/VolodymyrFedorov/codosaurs",
+    liveDemo: "https://volodymyrfedorov.github.io/codosaurs"
   },
   {
     title: "Car Rent",
@@ -71,6 +75,8 @@ export const projectsData = [
       "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
     tags: ["React", "Redux Toolkit", "Tailwind", "Lottie"],
     imageUrl: carRentImg,
+    github: "https://github.com/yurii2007/car-rent",
+    liveDemo: "https://yurii2007.github.io/car-rent"
   },
 ] as const;
 

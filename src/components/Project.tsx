@@ -1,10 +1,19 @@
 import { motion } from "framer-motion";
+import { FaSquareGithub } from "react-icons/fa6";
+import { FiExternalLink } from "react-icons/fi";
 
 import { projectsData } from "../constants/data";
 
 type Props = (typeof projectsData)[number];
 
-export const Project = ({ title, description, imageUrl, tags }: Props) => {
+export const Project = ({
+  title,
+  description,
+  imageUrl,
+  tags,
+  github,
+  liveDemo,
+}: Props) => {
   return (
     <motion.div
       whileInView={{ y: 0, opacity: 1 }}
@@ -12,7 +21,8 @@ export const Project = ({ title, description, imageUrl, tags }: Props) => {
       initial={{ y: 100, opacity: 0.5 }}
       className="group"
     >
-      <article className="bg-primary-gradient shadow-2xl max-w-[28rem] lg:h-[20rem] border border-black/5 overflow-hidden relative group-even:lg:translate-y-[3rem] rounded-lg">
+      <article className="bg-primary-gradient shadow-2xl max-w-[28rem] lg:h-[20rem]
+       overflow-hidden relative group-even:lg:translate-y-[2.5rem] rounded-lg">
         <img
           src={imageUrl}
           alt={title}
@@ -24,6 +34,19 @@ export const Project = ({ title, description, imageUrl, tags }: Props) => {
         >
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="leading-relaxed text-white">{description}</p>
+          <div className="flex justify-stretch gap-2 items-center ">
+            <a href={github} className="block w-10 h-10" target="_blank" rel="noreferrer">
+              <FaSquareGithub size="100%" />
+            </a>
+            <a
+              href={liveDemo}
+              className="block w-10 h-10"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FiExternalLink size="100%" />
+            </a>
+          </div>
           <ul className="flex flex-wrap mt-auto gap-2">
             {tags.map((tag) => (
               <li

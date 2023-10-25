@@ -1,7 +1,8 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import Lottie from "lottie-react";
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import myPortrait from "../images/myphoto.jpg";
 import waveHand from "../images/animation/waving.json";
 import linkedIn from "../images/animation/linkedInLogo.json";
@@ -19,6 +20,8 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
     threshold: 0.5,
   };
   const { ref } = useViewSection(initialViewState);
+  const lottieRefLinkedIn = useRef<LottieRefCurrentProps>(null);
+  lottieRefLinkedIn.current?.setSpeed(0.6);
 
   return (
     <section
@@ -72,8 +75,8 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
       >
         <a
           href="#contact"
-          className="group bg-slate-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
-          focus:scale-105 hover:scale-105 active:scale-[1.02] hover:bg-slate-600 transition"
+          className="group bg-slate-900 text-white px-7 py-3 flex items-center justify-center gap-2 rounded-full outline-none 
+          focus:scale-105 hover:scale-105 active:scale-[1.03] hover:bg-slate-600 transition w-[203px] sm:w-auto"
         >
           Contact me&nbsp;
           <BsArrowRight className="group-hover:translate-x-1 transition opacity-70" />
@@ -81,7 +84,8 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
         <a
           href="../additionalFiles/CV.pdf"
           download
-          className="group bg-white text-slate-950 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-[1.02] transition cursor-pointer border border-black/10"
+          className="group bg-white text-slate-950 px-7 py-3 flex items-center gap-2 rounded-full outline-none
+           focus:scale-105 hover:scale-105 active:scale-[1.03] transition cursor-pointer"
         >
           Download CV&nbsp;
           <HiDownload className="group-hover:translate-y-1 opacity-80 transition" />
@@ -90,18 +94,21 @@ const Intro = ({ setActive, lastClickTime }: DefaultProps) => {
           href="https://www.linkedin.com/in/yurii-shymanskyi-313640278/"
           target="_blank"
           rel="noreferrer"
-          className="bg-white p-[0.4rem] text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-[0.1rem] flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15]
+           active:scale-105 transition cursor-pointer"
         >
           <Lottie
+            lottieRef={lottieRefLinkedIn}
             animationData={linkedIn}
-            style={{ width: "2.5rem", height: "2.5rem" }}
+            style={{ width: "3rem", height: "3rem" }}
           />
         </a>
         <a
           href="https://github.com/yurii2007"
           target="_blank"
           rel="noreferrer"
-          className="bg-white p-3 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-[0.55rem] flex items-center gap-2 rounded-full text-[1.35rem] outline-none focus:scale-[1.15] 
+          hover:scale-[1.15] active:scale-105 transition cursor-pointer"
         >
           <Lottie animationData={github} style={{ width: "2rem", height: "2rem" }} />
         </a>

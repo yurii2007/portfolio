@@ -53,7 +53,7 @@ export const ContactForm = ({ setActive, lastClickTime }: DefaultProps) => {
       </p>
       <form onSubmit={onSubmit} className="mt-7 flex flex-col ">
         <input
-          className="h-14 px-4 rounded-lg text-slate-950 outline-[#029cdc]"
+          className="h-14 px-4 rounded-lg text-slate-950 outline-secondary-color"
           type="email"
           required
           name="email"
@@ -61,7 +61,7 @@ export const ContactForm = ({ setActive, lastClickTime }: DefaultProps) => {
           placeholder="example@mail.com"
         />
         <textarea
-          className="h-52 resize-none text-slate-950 my-3 rounded-lg p-4 outline-[#029cdc]"
+          className="h-52 resize-none text-slate-950 my-3 rounded-lg p-4 outline-secondary-color"
           placeholder="Example message"
           autoComplete="off"
           minLength={10}
@@ -70,7 +70,8 @@ export const ContactForm = ({ setActive, lastClickTime }: DefaultProps) => {
         />
         <button
           type="submit"
-          className="group h-[3rem] w-[8rem] flex items-center justify-center bg-gray-800 focus:scale-110 hover:scale-110 hover:bg-gray-700 active:scale-105 outline-none transition-all rounded-full text-white"
+          className="group h-[3rem] w-[8rem] flex items-center justify-center bg-[#386b81] focus:scale-110 hover:scale-110
+           hover:bg-secondary-color active:scale-105 outline-none transition-all rounded-full text-white"
         >
           Submit&nbsp;
           <Lottie animationData={sendBtn} style={{ width: "2.4rem", height: "2.4rem" }} />
