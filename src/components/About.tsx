@@ -55,7 +55,7 @@ export const About = ({ setActive, lastClickTime }: DefaultProps) => {
       <p>
         I also enjoy&nbsp;
         <span className="font-semibold">learning new things</span>. I am currently
-        learning about <span className="font-semibold">Docker</span>&nbsp;and&nbsp;<span className="font-semibold">Nest.js</span>.
+        learning about <span className="font-semibold">Next.js</span>.
       </p>
     </motion.section>
   );
